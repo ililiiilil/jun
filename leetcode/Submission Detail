@@ -1,0 +1,10 @@
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        count = 0
+        for answer in nums:
+            list = [int(i) for i in str(answer)]
+            if len(list) % 2 == 0:
+                count += 1
+        
+        return count
+                
