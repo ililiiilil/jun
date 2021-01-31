@@ -1,0 +1,15 @@
+T = int(input())
+
+for i in range(T):
+    a = input()
+    ans = [str(k) for k in str(a)] 
+    cnt = 0
+    score = 0
+    for j in range(len(ans)):
+        if ans[j] == 'O':
+            cnt += 1
+            score += cnt
+        else:
+            cnt = 0
+    print(score)
+
