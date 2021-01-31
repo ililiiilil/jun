@@ -1,0 +1,8 @@
+N = int(input())
+ans = list(map(int,input().split()))
+res = max(ans)
+new = []
+for i in ans:
+    new.append(i/res*100)
+
+print(sum(new)/N)
