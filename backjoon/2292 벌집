@@ -1,0 +1,13 @@
+N = int(input())
+
+cnt = 1
+mul = 6
+sum = 1
+while True:
+    if N <= sum:
+        print(cnt)
+        break
+    sum += cnt*mul
+    cnt += 1
+    
+
