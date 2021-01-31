@@ -1,0 +1,11 @@
+A = int(input())
+B = int(input())
+C = int(input())
+
+num = A*B*C
+ans = [int(i) for i in str(num)]
+cnt = []
+for i in range(0,10):
+    cnt.append(ans.count(i))
+for i in cnt:
+    print(i)
