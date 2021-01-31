@@ -1,0 +1,16 @@
+from collections import deque
+
+C = int(input())
+
+for i in range(C):
+    ans = deque(map(int,input().split()))
+    N = ans[0]
+    ans.popleft()
+    
+    average = sum(ans) / N
+    cnt = 0
+    for j in range(N):
+        if ans[j] > average:
+            cnt += 1
+    print(format(cnt/N*100,'0.3f'),end='')
+    print('%')
