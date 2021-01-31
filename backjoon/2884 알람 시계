@@ -1,0 +1,12 @@
+hour,minute = map(int,input().split())
+
+new_time = hour*60 + minute - 45
+
+if new_time < 0:
+    new_hour = 23
+    new_minute = 60 + new_time
+else:
+    new_hour = new_time // 60
+    new_minute = new_time % 60
+
+print(new_hour,new_minute)
