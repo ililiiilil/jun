@@ -1,0 +1,6 @@
+ans = []
+for i in range(10):
+    ans.append(int(input())%42)
+cnt = len(set(ans))
+print(cnt)
+
