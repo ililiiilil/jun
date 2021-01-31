@@ -1,0 +1,5 @@
+N = int(input())
+ans = list(map(int,input().split()))
+
+print(min(ans),end=' ')
+print(max(ans))
