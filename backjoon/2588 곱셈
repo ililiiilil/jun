@@ -1,0 +1,16 @@
+a = input()
+b = input()
+
+b_list = [int(i) for i in str(b)]
+a_list = []
+
+for i in b_list:
+    a_list.append(int(int(a)*i))
+
+print(a_list[2])
+print(a_list[1])
+print(a_list[0])
+
+answer = a_list[0]*100 + a_list[1]*10 + a_list[2]
+       
+print(answer)
