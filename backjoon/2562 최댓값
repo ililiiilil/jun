@@ -1,0 +1,7 @@
+ans = []
+for i in range(9):
+    ans.append(int(input()))
+
+result = max(ans)
+print(result)
+print(ans.index(result)+1)
