@@ -1,0 +1,6 @@
+S = input().strip()
+
+if len(S) == 0:
+    print(0)
+else:
+    print(S.count(' ')+1)
