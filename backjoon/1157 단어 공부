@@ -1,0 +1,14 @@
+word = list(str(input()).upper())
+word.sort()
+alpa = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+ans = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+cnt = 0
+for i in range(len(word)):
+    cnt = alpa.index(word[i])
+    ans[cnt] += 1
+if ans.count(max(ans)) >= 2:
+    print('?')
+else:
+    print(alpa[ans.index(max(ans))])
+    
+    
