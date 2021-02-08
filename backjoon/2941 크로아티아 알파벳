@@ -1,0 +1,7 @@
+word = input()
+
+a = ['c=','c-','dz=','d-','lj','nj','s=','z=']
+
+for t in a:
+    word = word.replace(t,'*')
+print(len(word))
