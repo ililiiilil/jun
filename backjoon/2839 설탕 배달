@@ -1,0 +1,15 @@
+N = int(input())
+
+a = N // 5
+b = N // 3
+ans = []
+
+for i in range(a+1):
+    for j in range(b+1):
+        if N == 5*i + 3*j:
+            ans.append(i+j)
+if ans == []:
+    print(-1)
+else:
+    print(min(ans))
+            
