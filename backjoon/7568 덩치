@@ -1,0 +1,15 @@
+N = int(input())
+ans = []
+
+for i in range(N):
+    a = list(map(int,input().split()))
+    ans.append(a)
+
+for j in range(N):
+    cnt = 1
+    for k in range(N):
+        if ans[j][0] < ans[k][0] and ans[j][1] < ans[k][1]:
+            cnt += 1
+    print(cnt,sep=' ')
+    
+    
