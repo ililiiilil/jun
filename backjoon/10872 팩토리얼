@@ -1,0 +1,11 @@
+def factorial(N):
+    if N == 1:
+        return 1
+    return N * factorial(N-1)
+
+Num = int(input())
+if Num == 0:
+    print(1)
+else:
+    print(factorial(Num))
+
