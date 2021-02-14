@@ -1,0 +1,14 @@
+import sys
+
+N,M = map(int,sys.stdin.readline().split())
+sol = list(map(int,input().split()))
+ans = []
+for i in range(len(sol)-2):
+    for j in range(i+1,len(sol)-1):
+        for k in range(j+1,len(sol)):
+            ans.append(sol[i]+sol[j]+sol[k])
+new = []
+for n in range(len(ans)):
+    if ans[n] <= M:
+        new.append(ans[n])
+print(max(new))
