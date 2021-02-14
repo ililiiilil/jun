@@ -1,0 +1,11 @@
+N = int(input())
+res = []
+for num in range(1,N):
+    ans = [int(i) for i in str(num)]
+    if sum(ans) + num == N:
+        res.append(num)
+
+if len(res) == 0:
+    print(0)
+else:
+    print(min(res))
