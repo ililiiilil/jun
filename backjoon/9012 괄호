@@ -1,0 +1,19 @@
+T = int(input())
+
+for _ in range(T):
+    answer = list(input())
+    cnt = 0
+    
+    while(len(answer)) != 0:
+        if cnt < 0:
+            break
+        res = answer.pop()
+        
+        if res == '(':
+            cnt -= 1
+        elif res == ')':
+            cnt += 1
+    if cnt == 0:
+        print('YES')
+    else:
+        print('NO')
