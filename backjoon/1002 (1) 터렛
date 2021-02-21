@@ -1,0 +1,21 @@
+from sympy import Symbol, solve
+
+T = int(input())
+for i in range(T):
+    ans = []
+    x = Symbol('x')
+    y = Symbol('y')
+    
+    x1,y1,r1,x2,y2,r2 = int(input().split())
+    
+    if x1 == x2 and y1 == y2 and r1 == r2:
+        print('-1')
+    else:
+        equation1 = (x-x1)**2 + (y-y1)**2 - r1**2 
+        equation2 = (x-x2)**2 + (y-y1)**2 - r2**2
+        
+        result = solve((equation1,equation2),dict=True)
+        ans.append(result)
+        
+        print(len(ans))
+    
