@@ -1,0 +1,28 @@
+from collections import deque
+
+while True:
+    answer = deque(input())
+    if len(answer) == 1 and answer[0] == '.':
+        break
+    cnt1,cnt2 = 0,0
+    
+    while len(answer) != 0:
+        if cnt1 < 0 or cnt2 < 0:
+            break
+        res = answer.popleft()
+        
+        if res == '(':
+            cnt1 += 1
+        elif res == ')':
+            cnt1 -= 1
+        elif res == '[':
+            cnt2 += 1
+        elif res == ']':
+            cnt2 -= 1
+        
+        
+    if cnt1 == 0 and cnt2 == 0:
+        print('yes')
+    else:
+        print('no')
+
