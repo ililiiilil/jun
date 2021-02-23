@@ -1,0 +1,23 @@
+from collections import deque
+T = int(input())
+
+for _ in range(T):
+    N,M = map(int,input().split())
+    ans1 = deque(int(i) for i in range(N))
+    ans2 = deque(map(int,input().split()))
+    ans1[M] = 'Target'
+    cnt = 0
+    
+    while True:
+        if ans2[0] == max(ans2):
+            cnt += 1
+
+            if ans1[0] == 'Target':
+                print(cnt)
+                break
+            else:
+                ans1.popleft()
+                ans2.popleft()
+        else:
+            ans1.append(ans1.popleft())
+            ans2.append(ans2.popleft())
