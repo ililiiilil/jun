@@ -1,0 +1,40 @@
+from collection import deque
+res = deque()
+N = int(input())
+for _ in range(N):
+    ans = input().split()
+
+    if len(ans) == 2:
+        if ans[0] == 'push_front':
+            res.appendleft(int(ans[1]))
+        elif ans[0] == 'push_back':
+            res.append(int(ans[1]))
+
+    elif len(ans) == 1:
+        if ans[0] == 'pop_front':
+            if len(res) == 0:
+                print(-1)
+            else:
+                print(res.popleft())
+        elif ans[0] == 'pop_back':
+            if len(res) == 0:
+                print(-1)
+            else:
+                print(res.pop())
+        elif ans[0] == 'size':
+            print(len(res))
+        elif ans[0] == 'empty':
+            if len(res) == 0:
+                print(1)
+            else:
+                print(0)
+        elif ans[0] == 'front':
+            if len(res) == 0:
+                print(-1)
+            else:
+                print(res[0])
+        elif ans[0] == 'back':
+            if len(res) == 0:
+                print(-1)
+            else:
+                print(res[-1])
