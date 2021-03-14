@@ -1,0 +1,10 @@
+def solution(array,commands):
+    ans = []
+    for i in range(len(commands)):
+        a,b,c = commands[i][0],commands[i][1],commands[i][2]
+        res = array[a-1:b]
+        res.sort()
+        ans.append(res[c-1])
+        
+    return ans
+        
