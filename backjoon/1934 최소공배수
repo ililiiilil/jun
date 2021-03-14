@@ -1,0 +1,25 @@
+import sys
+
+T = int(input())
+input = sys.stdin.readline
+
+for i in range(T):
+    a,b = map(int,input().split())
+    if a < b:
+        a,b = b,a
+    ans = a*b
+    while True:
+        r = a % b
+        if r == 0:
+            print(int(ans/b))
+            break
+        a,b = b,r
+        
+
+    
+
+
+        
+        
+    
+        
