@@ -1,0 +1,14 @@
+def count(N,K):
+    cnt = 0
+    while N:
+        N //= K
+        cnt += N
+    return cnt
+
+N,M = map(int,input().split())
+
+f_cnt = count(N,5) - count(M,5) - count(N-M,5)
+t_cnt = count(N,2) - count(M,2) - count(N-M,2)
+
+answer = min(f_cnt,t_cnt)
+print(answer)
