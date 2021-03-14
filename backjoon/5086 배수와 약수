@@ -1,0 +1,14 @@
+while True:
+    ans = list(map(int,input().split()))
+    if ans == [0,0]:
+        break
+
+    a = ans[0]
+    b = ans[1]
+
+    if a % b == 0:
+        print('multiple')
+    elif b % a == 0:
+        print('factor')
+    else:
+        print('neither')
