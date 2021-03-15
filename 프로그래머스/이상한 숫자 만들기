@@ -1,0 +1,16 @@
+def solution(s):
+    cnt = 0
+    s = list(s)
+    
+    for i in range(len(s)):
+        if s[i] ==' ':
+            cnt = 0
+        else:
+            if cnt % 2 == 0:
+                s[i] = s[i].upper()
+                cnt += 1
+            elif cnt % 2 == 1:
+                s[i] = s[i].lower()
+                cnt += 1
+    s = ''.join(s)
+    return s
