@@ -1,0 +1,8 @@
+def solution(x):
+    ans1 = [int(i) for i in str(x)]
+    ans2 = sum(ans1)
+    
+    if x % ans2:
+        return False
+    else:
+        return True
