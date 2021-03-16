@@ -1,0 +1,7 @@
+def solution(n):
+    n = [int(i) for i in str(n)]
+    n.sort(reverse=True)
+    n = list(map(str,n))
+    n = int(''.join(n))
+    
+    return n
