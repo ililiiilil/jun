@@ -1,0 +1,4 @@
+def solution(a):
+    num = len(a)
+    back = a[-4:]
+    return "*"*(num-4)+back
