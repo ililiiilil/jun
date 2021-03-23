@@ -1,0 +1,6 @@
+def solution(a,b):
+    m = [0,31,29,31,30,31,30,31,31,30,31,30,31]
+    ans = ['THU','FRI','SAT','SUN','MON','TUE','WED']
+    cnt = sum(m[:a]) + b
+    
+    return ans[cnt%7]
